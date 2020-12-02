@@ -1,45 +1,45 @@
 <template>
 
-	<section class="product-page">
-		<h1 class="product-page__title">
+	<section class='product-page'>
+		<h1 class='product-page__title'>
 			Товар
 		</h1>
-		<div class="product-page__container">
+		<div class='product-page__container'>
 
-			<div class="product-page__image-container">
-				<img class="product-page__image"
-				     :src="product['Image URL']"
-				     :alt="product['SKU']" >
+			<div class='product-page__image-container'>
+				<img class='product-page__image'
+				     :src='product["Image URL"]'
+				     :alt='product["SKU"]' >
 			</div>
 
-			<div class="product-page__info">
-			<span class="product-page__type">
-				{{ product["Type"] }}
+			<div class='product-page__info'>
+			<span class='product-page__type'>
+				{{ product['Type'] }}
 			</span>
-				<span class="product-page__sku">
-				{{ product["SKU"] }}
+				<span class='product-page__sku'>
+				{{ product['SKU'] }}
 			</span>
-				<span class="product-page__quantity">
-				Количество товара: {{ product["Total Stock"] }}
+				<span class='product-page__quantity'>
+				Количество товара: {{ product['Total Stock'] }}
 			</span>
-				<span class="product-page__price">
-				{{ product["Retail Price"] }}
+				<span class='product-page__price'>
+				{{ product['Retail Price'] }}
 			</span>
-				<span class="product-page__description">
-				{{ product["Description"] }}
+				<span class='product-page__description'>
+				{{ product['Description'] }}
 			</span>
 			</div>
 		</div>
 
-		<div class="product-page__related related">
-			<h2 class="related__title">
+		<div class='product-page__related related'>
+			<h2 class='related__title'>
 				Похожие товары
 			</h2>
-			<div class="related__container">
+			<div class='related__container'>
 				<product-card
-					class="related__card"
-					v-for="(productData, productIndex) in related.slice(0, 3)"
-					:productsPropData="productData"/>
+					class='related__card'
+					v-for='(productData, productIndex) in related.slice(0, 3)'
+					:productsPropData='productData'/>
 			</div>
 		</div>
 
@@ -51,15 +51,15 @@
 
 	// IMPORTS
 
-	import { products } from "@/utils/products";
+	import { products } from '@/utils/products';
 
 	// COMPONENT OPTIONS
 
-	import router from "@/router";
-	import ProductCard from "@/components/ProductCard";
+	import router from '@/router';
+	import ProductCard from '@/components/ProductCard';
 
 	export default {
-		name: "ProductPage",
+		name: 'ProductPage',
 		components: {ProductCard},
 		data:() => {
 			return {
@@ -71,7 +71,7 @@
 			this.product = router.app.$route.params.result;
 
 			products.forEach(el => {
-				if (el["Type"] === this.product["Type"]) {
+				if (el['Type'] === this.product['Type']) {
 					this.related.push(el);
 				}
  			});
@@ -80,11 +80,11 @@
 
 </script>
 
-<style lang="scss" scoped>
+<style lang='scss' scoped>
 
 	// IMPORTS
 
-	@import "../assets/styles/utils/vars";
+	@import '../assets/styles/utils/vars';
 
 	.product-page {
 		margin: 52px auto 108px auto;

@@ -1,20 +1,20 @@
 <template>
 
-	<div class="card"
+	<div class='card'
 	     @click='computeRoute(productsPropData)'>
-		<div class="card__container">
-			<img class="card__image"
-				alt="product"
-				:src="productsPropData['Image URL']">
+		<div class='card__container'>
+			<img class='card__image'
+				alt='product'
+				:src='productsPropData["Image URL"]'>
 
-			<div class="card__type">
-				{{ productsPropData["Type"] }}
+			<div class='card__type'>
+				{{ productsPropData['Type'] }}
 			</div>
-			<div class="card__sku">
-				{{ productsPropData["SKU"] }}
+			<div class='card__sku'>
+				{{ productsPropData['SKU'] }}
 			</div>
-			<div class="card__price">
-				{{ productsPropData["Retail Price"] }} грн
+			<div class='card__price'>
+				{{ productsPropData['Retail Price'] }} грн
 			</div>
 		</div>
 	</div>
@@ -25,12 +25,12 @@
 
 	// IMPORTS
 
-	import { mapActions } from "vuex";
+	import { mapActions } from 'vuex';
 
 	// COMPONENT OPTIONS
 
 	export default {
-		name: "ProductCard",
+		name: 'ProductCard',
 		props: ['productsPropData'],
 		methods: {
 			...mapActions(['computeRoute'])
@@ -39,11 +39,11 @@
 
 </script>
 
-<style lang="scss" scoped>
+<style lang='scss' scoped>
 
 	// IMPORTS
 
-	@import "../assets/styles/utils/vars";
+	@import '../assets/styles/utils/vars';
 
 	.card {
 		border-radius: 6px;

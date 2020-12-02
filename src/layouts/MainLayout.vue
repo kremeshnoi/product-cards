@@ -1,6 +1,6 @@
 <template>
 
-	<div class="main-layout">
+	<div class='main-layout'>
 		<main-header/>
 		<main>
 			<router-view/>
@@ -12,11 +12,11 @@
 
 <script>
 
-	import MainHeader from "@/components/MainHeader";
-	import MainFooter from "@/components/MainFooter";
+	import MainHeader from '@/components/MainHeader';
+	import MainFooter from '@/components/MainFooter';
 
 	export default {
-		name: "MainLayout",
+		name: 'MainLayout',
 		components: {
 			MainFooter, MainHeader
 		}

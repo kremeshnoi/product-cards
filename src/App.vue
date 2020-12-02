@@ -1,7 +1,7 @@
 <template>
 
-	<div id="app">
-		<component :is="layout">
+	<div id='app'>
+		<component :is='layout'>
 			<router-view/>
 		</component>
 	</div>
@@ -12,7 +12,7 @@
 
 	// IMPORTS
 
-	import MainLayout from "@/layouts/MainLayout";
+	import MainLayout from '@/layouts/MainLayout';
 
 	// COMPONENT OPTIONS
 
@@ -29,7 +29,7 @@
 
 </script>
 
-<style lang="scss">
+<style lang='scss'>
 
 	* {
 		box-sizing: border-box;

@@ -1,9 +1,9 @@
 <template>
 
-	<header class="header">
-		<div class="header__container">
-			<router-link class="header__logo"
-				to="/">
+	<header class='header'>
+		<div class='header__container'>
+			<router-link class='header__logo'
+				to='/'>
 				Логотип
 			</router-link>
 			<main-nav/>
@@ -14,9 +14,9 @@
 
 <script>
 
-	import MainNav from "@/navigation/MainNav";
+	import MainNav from '@/navigation/MainNav';
 	export default {
-		name: "MainHeader",
+		name: 'MainHeader',
 		components: {
 			MainNav
 		}
@@ -24,11 +24,11 @@
 
 </script>
 
-<style lang="scss" scoped>
+<style lang='scss' scoped>
 
 	// IMPORTS
 
-	@import "../assets/styles/utils/vars";
+	@import '../assets/styles/utils/vars';
 
 	.header {
 		background-color: $color-turquoise;

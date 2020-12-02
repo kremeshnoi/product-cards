@@ -40,7 +40,7 @@ export default new Vuex.Store({
 		},
 		computeRoute(ctx, result) {
 			try {
-				const title = result["SKU"]
+				const title = result['SKU']
 					.split('/')
 					.splice(-1, 1)[0]
 					.toLowerCase()

@@ -9,17 +9,17 @@
 				       for='username'><b>Логин</b></label>
 				<input class='login__input'
 				       name='username'
-				       type="email"
+				       type='email'
 				       placeholder='Введите Email'
-				       v-model="email"
+				       v-model='email'
 				       required>
 
 				<label class='login__label'
 				       for='password'><b>Пароль</b></label>
 				<input class='login__input'
 				       name='password'
-				       type="password"
-				       v-model="password"
+				       type='password'
+				       v-model='password'
 				       placeholder='Введите пароль'
 				       required>
 
@@ -36,9 +36,9 @@
 
 	// IMPORTS
 
-	import { users } from "@/utils/users";
-	import { mapActions } from "vuex";
-	import router from "@/router";
+	import { users } from '@/utils/users';
+	import { mapActions } from 'vuex';
+	import router from '@/router';
 
 	// COMPONENT OPTIONS
 
@@ -49,7 +49,7 @@
 			password: ''
 		}),
 		methods: {
-			...mapActions(["addUserStatus"]),
+			...mapActions(['addUserStatus']),
 			binarySearch(data, email, password) {
 				data.sort((a, b) => a.email.localeCompare(b.email));
 				let start = 0;
@@ -68,7 +68,7 @@
 					else if (data[mid].name < email) start = mid + 1;
 					else end = mid - 1;
 				}
-				return console.log("Wrong data");
+				return console.log('Wrong data');
 			},
 			async submitHandler() {
 				try {
@@ -89,7 +89,7 @@
 
 <style lang='scss' scoped>
 
-	@import "../../assets/styles/utils/vars";
+	@import '../../assets/styles/utils/vars';
 
 	.login {
 		display: flex;

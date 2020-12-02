@@ -1,14 +1,14 @@
 <template>
 
-	<section class="products">
-		<h1 class="products__title">
+	<section class='products'>
+		<h1 class='products__title'>
 			Наша продукция
 		</h1>
-		<div class="products__container">
-			<product-card class="products__card"
-				v-for="(productsData, productsIndex) in products"
-				:key="productsIndex"
-				:productsPropData="productsData"/>
+		<div class='products__container'>
+			<product-card class='products__card'
+				v-for='(productsData, productsIndex) in products'
+				:key='productsIndex'
+				:productsPropData='productsData'/>
 		</div>
 	</section>
 
@@ -18,13 +18,13 @@
 
 	// IMPORTS
 
-	import { products } from "@/utils/products";
-	import ProductCard from "@/components/ProductCard";
+	import { products } from '@/utils/products';
+	import ProductCard from '@/components/ProductCard';
 
 	// COMPONENT OPTIONS
 
 	export default {
-		name: "Products",
+		name: 'Products',
 		components: {
 			ProductCard
 		},
@@ -37,11 +37,11 @@
 
 </script>
 
-<style lang="scss" scoped>
+<style lang='scss' scoped>
 
 	// IMPORTS
 
-	@import "../assets/styles/utils/vars";
+	@import '../assets/styles/utils/vars';
 
 	.products {
 		margin: 52px 0 108px 0;

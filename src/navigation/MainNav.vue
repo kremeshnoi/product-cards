@@ -1,22 +1,22 @@
 <template>
 
-	<nav class="navigation">
+	<nav class='navigation'>
 		<button
-			v-if="getUserInfo.length === 0"
-			class="navigation__button">
+			v-if='getUserInfo.length === 0'
+			class='navigation__button'>
 			Войти в аккаунт
 		</button>
 
 		<div
-			v-if="getUserInfo === true"
-			class="navigation__title">
+			v-if='getUserInfo === true'
+			class='navigation__title'>
 			Продукция
 		</div>
 
 		<button
-			v-if="getUserInfo === true"
-			@click="logout()"
-			class="navigation__button">
+			v-if='getUserInfo === true'
+			@click='logout()'
+			class='navigation__button'>
 			Выйти из системы
 		</button>
 	</nav>
@@ -25,11 +25,11 @@
 
 <script>
 
-	import { mapMutations, mapGetters } from "vuex"
-	import router from "@/router";
+	import { mapMutations, mapGetters } from 'vuex'
+	import router from '@/router';
 
 	export default {
-		name: "MainNav",
+		name: 'MainNav',
 		computed: {
 			...mapGetters(['getUserInfo'])
 		},
@@ -44,11 +44,11 @@
 
 </script>
 
-<style lang="scss" scoped>
+<style lang='scss' scoped>
 
 	// IMPORTS
 
-	@import "../assets/styles/utils/vars";
+	@import '../assets/styles/utils/vars';
 
 	.navigation {
 		margin: 0 0 0 10%;
