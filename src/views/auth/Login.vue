@@ -91,7 +91,7 @@
 
 		&__container {
 			max-width: 400px;
-			margin: 10% 20px 0 20px;
+			margin: calc(52px + 10%) 20px 0 20px;
 		}
 
 		&__form {
