@@ -64,8 +64,6 @@
 
 					if (data[mid].email === email && data[mid].password === password) {
 						return data[mid].email;
-						console.log(data[mid].email);
-						console.log(counter);
 					}
 					else if (data[mid].name < email) start = mid + 1;
 					else end = mid - 1;
