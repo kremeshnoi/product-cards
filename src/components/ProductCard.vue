@@ -1,6 +1,7 @@
 <template>
 
-	<div class="card">
+	<div class="card"
+	     @click='computeRoute(productsPropData)'>
 		<div class="card__container">
 			<img class="card__image"
 				alt="product"
@@ -22,11 +23,18 @@
 
 <script>
 
+	// IMPORTS
+
+	import { mapActions } from "vuex";
+
 	// COMPONENT OPTIONS
 
 	export default {
 		name: "ProductCard",
-		props: ['productsPropData']
+		props: ['productsPropData'],
+		methods: {
+			...mapActions(['computeRoute'])
+		}
 	}
 
 </script>

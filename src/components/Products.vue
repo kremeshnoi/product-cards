@@ -21,6 +21,8 @@
 	import { products } from "@/utils/products";
 	import ProductCard from "@/components/ProductCard";
 
+	// COMPONENT OPTIONS
+
 	export default {
 		name: "Products",
 		components: {
