@@ -1,0 +1,14 @@
+// IMPORTS
+
+@import "./vars";
+
+// MIXINS
+
+@mixin mq($width, $type) {
+	@if map_has_key($breakpoints, $width) {
+		$width: map_get($breakpoints, $width);
+		@media only screen and (#{ $type }-width: $width) {
+			@content
+		}
+	}
+}
