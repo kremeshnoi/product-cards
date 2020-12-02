@@ -42,7 +42,7 @@
 	@import "../assets/styles/utils/vars";
 
 	.products {
-		margin: 52px 0 0 0;
+		margin: 52px 0 108px 0;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
