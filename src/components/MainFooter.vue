@@ -21,9 +21,6 @@
 	.footer {
 		background-color: $color-turquoise;
 		padding: 24px;
-		position: fixed;
-		bottom: 0;
-		left: 0;
 		width: 100%;
 	}
 

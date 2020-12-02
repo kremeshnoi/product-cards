@@ -92,13 +92,12 @@
 	@import "../../assets/styles/utils/vars";
 
 	.login {
-		height: 100%;
 		display: flex;
 		justify-content: center;
 
 		&__container {
 			max-width: 400px;
-			margin: calc(52px + 10%) 20px 0 20px;
+			margin: calc(52px + 4%) 20px 0 20px;
 		}
 
 		&__form {

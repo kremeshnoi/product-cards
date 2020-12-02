@@ -26,5 +26,15 @@
 
 <style scoped>
 
+	.main-layout {
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+
+	main {
+		height: 100%;
+	}
 
 </style>
