@@ -9,6 +9,7 @@
 				       for='username'><b>Логин</b></label>
 				<input class='login__input'
 				       name='username'
+				       type="email"
 				       placeholder='Введите Email'
 				       v-model="email"
 				       required>
@@ -17,6 +18,7 @@
 				       for='password'><b>Пароль</b></label>
 				<input class='login__input'
 				       name='password'
+				       type="password"
 				       v-model="password"
 				       placeholder='Введите пароль'
 				       required>
@@ -35,6 +37,8 @@
 	// IMPORTS
 
 	import { users } from "@/utils/users";
+	import { mapActions } from "vuex";
+	import router from "@/router";
 
 	// COMPONENT OPTIONS
 
@@ -45,6 +49,7 @@
 			password: ''
 		}),
 		methods: {
+			...mapActions(["addUserStatus"]),
 			binarySearch(data, email, password) {
 				data.sort((a, b) => a.email.localeCompare(b.email));
 				let start = 0;
@@ -69,8 +74,12 @@
 			},
 			async submitHandler() {
 				try {
-					if (this.email.includes('@mail.ch')) alert('This user does not have access to the login');
-					else if (this.binarySearch(users, this.email, this.password)) this.$router.push('/');
+					if (this.email.includes('@mail.ch')) {
+						alert('This user does not have access to the login');
+					} else if (this.binarySearch(users, this.email, this.password)) {
+						this.addUserStatus(true);
+						this.$router.push('/');
+					}
 				} catch (error) {
 					throw new Error(error);
 				}

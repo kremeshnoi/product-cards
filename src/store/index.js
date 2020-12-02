@@ -4,12 +4,20 @@ import Vuex from 'vuex'
 Vue.use(Vuex)
 
 export default new Vuex.Store({
-  state: {
-  },
-  mutations: {
-  },
-  actions: {
-  },
-  modules: {
-  }
+	state: {
+		userInfo: []
+	},
+	mutations: {
+		SET_USER_INFO(state, userInfo) {
+			state.userInfo = userInfo;
+		}
+	},
+	actions: {
+		addUserStatus(ctx, data) {
+			ctx.commit('SET_USER_INFO', data);
+		}
+	},
+	getters: {
+		getUserInfo: state => state.userInfo
+	}
 })
