@@ -20,7 +20,6 @@ const routes = [
 			}
 
 			next();
-
 		}
 	},
 	{
@@ -34,6 +33,22 @@ const routes = [
 			const currentUser = isUser();
 			if(currentUser) {
 				next('/')
+			}
+
+			next();
+		}
+	},
+	{
+		path: '/product/:title',
+		name: 'Product',
+		meta: {
+			layout: 'MainLayout'
+		},
+		component: () => import('../views/ProductPage.vue'),
+		beforeEnter: (to, from, next) => {
+			const currentUser = isUser();
+			if(!currentUser) {
+				next('/login')
 			}
 
 			next();

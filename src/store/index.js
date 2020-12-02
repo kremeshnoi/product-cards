@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import router from '../router';
 
 Vue.use(Vuex)
 
@@ -36,6 +37,19 @@ export default new Vuex.Store({
 	actions: {
 		addUserStatus(ctx, data) {
 			ctx.commit('SET_USER_INFO', data);
+		},
+		computeRoute(ctx, result) {
+			try {
+				const title = result["SKU"]
+					.split('/')
+					.splice(-1, 1)[0]
+					.toLowerCase()
+					.split('_')
+					.join('-');
+				router.push({ name: 'Product', params: { title, result } });
+			} catch (error) {
+				throw new Error(error);
+			}
 		}
 	},
 	getters: {
