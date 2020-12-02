@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
-import store from '../store'
+import store, { isUser } from '../store'
 
 Vue.use(VueRouter)
 
@@ -12,7 +12,16 @@ const routes = [
 		meta: {
 			layout: 'MainLayout'
 		},
-		component: () => import('../views/Home.vue')
+		component: () => import('../views/Home.vue'),
+		beforeEnter: (to, from, next) => {
+			const currentUser = isUser();
+			if(!currentUser) {
+				next('/login')
+			}
+
+			next();
+
+		}
 	},
 	{
 		path: '/login',
@@ -20,7 +29,15 @@ const routes = [
 		meta: {
 			layout: 'MainLayout'
 		},
-		component: () => import('../views/auth/Login.vue')
+		component: () => import('../views/auth/Login.vue'),
+		beforeEnter: (to, from, next) => {
+			const currentUser = isUser();
+			if(currentUser) {
+				next('/')
+			}
+
+			next();
+		}
 	}
 ]
 
@@ -29,15 +46,5 @@ const router = new VueRouter({
 	base: process.env.BASE_URL,
 	routes
 })
-
-// router.beforeEach((to,from, next) => {
-// 	const currentUser = store.getters.getUserInfo;
-//
-// 	if(!currentUser) {
-// 		next('/login');
-// 	} else {
-// 		next();
-// 	}
-// });
 
 export default router
