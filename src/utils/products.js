@@ -3,6 +3,7 @@ export const products = [
 		"SKU": "4G180",
 		"Description": "Tenda 4G LTE 150Mbps Mobile WiFi Router | 4G180",
 		"CPT": "34",
+		"Type": "Роутер",
 		"JHB": "70",
 		"DBN": "2",
 		"Total Stock:": "106",
@@ -14,6 +15,7 @@ export const products = [
 	{
 		"SKU": "4G680",
 		"Description": "Tenda 4G LTE 300Mbps WiFi Router | 4G680",
+		"Type": "Роутер",
 		"CPT": "0",
 		"JHB": "0",
 		"DBN": "0",
@@ -26,6 +28,7 @@ export const products = [
 	{
 		"SKU": "ACB-AC",
 		"Description": "Ubiquiti AirCube AC WiFi Router | ACB-AC",
+		"Type": "Роутер",
 		"CPT": "20",
 		"JHB": "101",
 		"DBN": "3",
@@ -38,6 +41,7 @@ export const products = [
 	{
 		"SKU": "ACB-ISP",
 		"Description": "Ubiquiti AirCube WiFi PoE Access Point with UNMS | ACB-ISP",
+		"Type": "Роутер",
 		"CPT": "159",
 		"JHB": "107",
 		"DBN": "30",
@@ -50,6 +54,7 @@ export const products = [
 	{
 		"SKU": "AF-11FX",
 		"Description": "Ubiquiti AirFiberX 11GHz PtP Radio | AF-11FX",
+		"Type": "Роутер",
 		"CPT": "10",
 		"JHB": "43",
 		"DBN": "2",
@@ -62,6 +67,7 @@ export const products = [
 	{
 		"SKU": "AF-11FXDUPL",
 		"Description": "Ubiquiti AirFiberX 11Ghz Low Band Duplexer | AF-11FX-DUP-L",
+		"Type": "Роутер",
 		"CPT": "21",
 		"JHB": "79",
 		"DBN": "2",
@@ -74,6 +80,7 @@ export const products = [
 	{
 		"SKU": "AF-11G35",
 		"Description": "Ubiquiti AirFiber Dish 11Ghz 35dBi 81cm | AF-11G35",
+		"Type": "Спутниковая тарелка",
 		"CPT": "15",
 		"JHB": "56",
 		"DBN": "3",
@@ -86,6 +93,7 @@ export const products = [
 	{
 		"SKU": "AF-11G35",
 		"Description": "Ubiquiti AirFiber5X HD PtP Radio Gigabit WiFi | AF-5XHD",
+		"Type": "Спутниковая тарелка",
 		"CPT": "64",
 		"JHB": "117",
 		"DBN": "9",
@@ -98,6 +106,7 @@ export const products = [
 	{
 		"SKU": "AFI-INSK",
 		"Description": "Ubiquiti AmpliFi Instant Router +1 MeshPoint Kit | AFI-INS",
+		"Type": "Роутер",
 		"CPT": "37",
 		"JHB": "113",
 		"DBN": "5",
@@ -110,6 +119,7 @@ export const products = [
 	{
 		"SKU": "AFI-INSR",
 		"Description": "Ubiquiti AmpliFi Instant Router | AFI-INS-R",
+		"Type": "Роутер",
 		"CPT": "23",
 		"JHB": "52",
 		"DBN": "3",
@@ -122,6 +132,7 @@ export const products = [
 	{
 		"SKU": "AIR-D523X",
 		"Description": "Ubiquiti 5GHz AirFiber Dish 23dBi Slant 45 PtP | AF-5G23-S45",
+		"Type": "Спутниковая тарелка",
 		"CPT": "16",
 		"JHB": "36",
 		"DBN": "5",
@@ -134,6 +145,7 @@ export const products = [
 	{
 		"SKU": "AIR-D530",
 		"Description": "Ubiquiti 5GHz AirMax Dish 30dBi Backhaul PtP | RD-5G30",
+		"Type": "Спутниковая тарелка",
 		"CPT": "17",
 		"JHB": "18",
 		"DBN": "5",
@@ -146,6 +158,7 @@ export const products = [
 	{
 		"SKU": "AIR-D530LW",
 		"Description": "Ubiquiti 5GHz AirMax Dish 30dBi Light Weight PtP | RD-5G30-LW",
+		"Type": "Спутниковая тарелка",
 		"CPT": "62",
 		"JHB": "243",
 		"DBN": "16",
