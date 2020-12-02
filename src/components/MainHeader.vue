@@ -2,9 +2,10 @@
 
 	<header class="header">
 		<div class="header__container">
-			<div class="header__logo">
+			<router-link class="header__logo"
+				to="/">
 				Логотип
-			</div>
+			</router-link>
 			<main-nav/>
 		</div>
 	</header>
@@ -48,6 +49,7 @@
 		&__logo {
 			color: $color-white;
 			font-size: 24px;
+			text-decoration: none;
 		}
 
 	}
