@@ -93,6 +93,7 @@
 	// IMPORTS
 
 	@import '../assets/styles/utils/vars';
+	@import '../assets/styles/utils/mixins';
 
 	// PRODUCT PAGE STYLES
 
@@ -102,6 +103,10 @@
 		flex-direction: column;
 		align-items: center;
 		max-width: 1200px;
+		padding: 0 10px 0 10px;
+		@include mq(phone-wide, max) {
+			margin: 24px 0 54px 0;
+		}
 
 		span {
 			margin: 4px 0;
@@ -111,18 +116,27 @@
 			font-size: 40px;
 			font-weight: 400;
 			color: $color-turquoise;
+			@include mq(phone-wide, max) {
+				font-size: 32px;
+			}
 		}
 
 		&__container {
 			display: flex;
 			max-width: 900px;
 			width: 100%;
+			@include mq(phone-wide, max) {
+				flex-direction: column;
+			}
 		}
 
 		&__info {
 			margin: 0 0 0 40px;
 			display: flex;
 			flex-direction: column;
+			@include mq(phone-wide, max) {
+				margin: 10px 0 0 0;
+			}
 		}
 
 		&__image-container {
@@ -169,6 +183,9 @@
 		&__container {
 			display: flex;
 			justify-content: space-between;
+			@include mq(phone-wide, max) {
+				flex-wrap: wrap;
+			}
 		}
 
 		&__title {
@@ -180,9 +197,12 @@
 		&__card {
 			width: 100%;
 			margin: 0 20px 0 0;
-
 			&:last-of-type {
 				margin: 0;
+			}
+
+			@include mq(phone-wide, max) {
+				margin: 10px 0 10px 0;
 			}
 		}
 	}

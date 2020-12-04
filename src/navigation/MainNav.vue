@@ -27,7 +27,7 @@
 
 	// IMPORTS
 
-	import {mapMutations, mapGetters} from 'vuex'
+	import { mapMutations, mapGetters } from 'vuex';
 	import router from '@/router';
 
 	// COMPONENT OPTIONS
@@ -53,6 +53,7 @@
 	// IMPORTS
 
 	@import '../assets/styles/utils/vars';
+	@import '../assets/styles/utils/mixins';
 
 	// NAVIGATION STYLES
 
@@ -60,11 +61,13 @@
 		margin: 0 0 0 10%;
 		display: flex;
 		justify-content: space-between;
+		align-items: center;
 		width: 100%;
 
 		&__title {
 			color: $color-white;
 			font-size: 14px;
+			margin: 0 10px 0 0;
 		}
 
 		&__button {
@@ -76,6 +79,9 @@
 			outline: none;
 			cursor: pointer;
 			font-size: 14px;
+			@include mq(phone-wide, max) {
+				max-width: 70px;
+			}
 		}
 	}
 

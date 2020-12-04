@@ -40,9 +40,10 @@
 
 <style lang='scss' scoped>
 
-// IMPORTS
+	// IMPORTS
 
-@import '../assets/styles/utils/vars';
+	@import '../assets/styles/utils/vars';
+	@import '../assets/styles/utils/mixins';
 
 	// CARD STYLES
 
@@ -85,6 +86,9 @@
 			font-size: 20px;
 			color: $color-green;
 			text-align: end;
+			@include mq(tablet, max) {
+				text-align: start;
+			}
 		}
 	}
 

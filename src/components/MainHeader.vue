@@ -34,6 +34,7 @@
 	// IMPORTS
 
 	@import '../assets/styles/utils/vars';
+	@import '../assets/styles/utils/mixins';
 
 	// HEADER STYLES
 
@@ -45,6 +46,9 @@
 		width: 100%;
 		display: flex;
 		justify-content: center;
+		@include mq(phone-wide, max) {
+			padding: 10px 10px;
+		}
 
 		&__container {
 			display: flex;
