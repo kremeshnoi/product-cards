@@ -1,24 +1,24 @@
-import Vue from 'vue'
-import Vuex from 'vuex'
+import Vue from 'vue';
+import Vuex from 'vuex';
 import router from '../router';
 
-Vue.use(Vuex)
+Vue.use(Vuex);
 
-function authUser() {
+const authUser = function () {
 	return localStorage.getItem('user') ? JSON.parse(localStorage.getItem('user')) : [];
-}
+};
 
-export function isUser() {
+export const isUser = function () {
 	return !!localStorage.getItem('user');
-}
+};
 
-function saveUser(user) {
+const saveUser = function (user) {
 	localStorage.setItem('user', JSON.stringify(user));
-}
+};
 
-function clearUser() {
+const clearUser = function () {
 	localStorage.setItem('user', []);
-}
+};
 
 export default new Vuex.Store({
 	state: {

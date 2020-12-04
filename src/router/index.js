@@ -1,9 +1,9 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
-import store, { isUser } from '../store'
+import Vue from 'vue';
+import VueRouter from 'vue-router';
+import Home from '../views/Home.vue';
+import store, { isUser } from '../store';
 
-Vue.use(VueRouter)
+Vue.use(VueRouter);
 
 const routes = [
 	{
@@ -16,7 +16,7 @@ const routes = [
 		beforeEnter: (to, from, next) => {
 			const currentUser = isUser();
 			if(!currentUser) {
-				next('/login')
+				next('/login');
 			}
 
 			next();
@@ -32,7 +32,7 @@ const routes = [
 		beforeEnter: (to, from, next) => {
 			const currentUser = isUser();
 			if(currentUser) {
-				next('/')
+				next('/');
 			}
 
 			next();
@@ -48,18 +48,18 @@ const routes = [
 		beforeEnter: (to, from, next) => {
 			const currentUser = isUser();
 			if(!currentUser) {
-				next('/login')
+				next('/login');
 			}
 
 			next();
 		}
 	}
-]
+];
 
 const router = new VueRouter({
 	mode: 'history',
 	base: process.env.BASE_URL,
 	routes
-})
+});
 
-export default router
+export default router;

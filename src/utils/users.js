@@ -29,4 +29,4 @@ export const users = [
 		'email': 'ayalajarvis@premiant.com',
 		'password': 'ayalajarvis123'
 	}
-]
+];

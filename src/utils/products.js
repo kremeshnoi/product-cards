@@ -168,4 +168,4 @@ export const products = [
 		'Manufacturer': 'Ubiquiti',
 		'Image URL': 'https://scoop.co.za/download/marketing/images/AIR-D530LW.jpg'
 	}
-]
+];
