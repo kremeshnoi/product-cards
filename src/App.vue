@@ -31,6 +31,8 @@
 
 <style lang='scss'>
 
+	// APP STYLES
+
 	* {
 		box-sizing: border-box;
 	}

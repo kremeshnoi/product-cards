@@ -2,7 +2,7 @@
 
 	<div class='main-layout'>
 		<main-header/>
-		<main>
+		<main class="main-layout__main">
 			<router-view/>
 		</main>
 		<main-footer/>
@@ -12,8 +12,12 @@
 
 <script>
 
+	// IMPORTS
+
 	import MainHeader from '@/components/MainHeader';
 	import MainFooter from '@/components/MainFooter';
+
+	// COMPONENT OPTIONS
 
 	export default {
 		name: 'MainLayout',
@@ -24,16 +28,18 @@
 
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+
+	// MAIN LAYOUT STYLES
 
 	.main-layout {
 		height: 100%;
 		display: flex;
 		flex-direction: column;
-	}
 
-	main {
-		flex: 1;
+		&__main {
+			flex: 1;
+		}
 	}
 
 </style>

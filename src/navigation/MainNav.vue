@@ -25,8 +25,12 @@
 
 <script>
 
+	// IMPORTS
+
 	import { mapMutations, mapGetters } from 'vuex'
 	import router from '@/router';
+
+	// COMPONENT OPTIONS
 
 	export default {
 		name: 'MainNav',
@@ -49,6 +53,8 @@
 	// IMPORTS
 
 	@import '../assets/styles/utils/vars';
+
+	// NAVIGATION STYLES
 
 	.navigation {
 		margin: 0 0 0 10%;

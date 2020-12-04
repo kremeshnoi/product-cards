@@ -86,6 +86,8 @@
 
 	@import '../assets/styles/utils/vars';
 
+	// PRODUCT PAGE STYLES
+
 	.product-page {
 		margin: 52px auto 108px auto;
 		display: flex;
@@ -149,6 +151,8 @@
 			text-align: start;
 		}
 	}
+
+	// RELATED STYLES
 
 	.related {
 		width: 100%;

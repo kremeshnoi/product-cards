@@ -6,6 +6,8 @@
 
 <script>
 
+	// COMPONENT OPTIONS
+
 	export default {
 		name: 'MainFooter'
 	}
@@ -17,6 +19,8 @@
 	// IMPORTS
 
 	@import '../assets/styles/utils/vars';
+
+	// FOOTER STYLES
 
 	.footer {
 		background-color: $color-turquoise;

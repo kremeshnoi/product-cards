@@ -89,7 +89,11 @@
 
 <style lang='scss' scoped>
 
+	// IMPORTS
+
 	@import '../../assets/styles/utils/vars';
+
+	// LOGIN STYLES
 
 	.login {
 		display: flex;

@@ -14,7 +14,12 @@
 
 <script>
 
+	// IMPORTS
+
 	import MainNav from '@/navigation/MainNav';
+
+	// COMPONENT OPTIONS
+
 	export default {
 		name: 'MainHeader',
 		components: {
@@ -29,6 +34,8 @@
 	// IMPORTS
 
 	@import '../assets/styles/utils/vars';
+
+	// HEADER STYLES
 
 	.header {
 		background-color: $color-turquoise;

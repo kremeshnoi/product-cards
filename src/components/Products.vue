@@ -43,6 +43,8 @@
 
 	@import '../assets/styles/utils/vars';
 
+	// PRODUCTS STYLES
+
 	.products {
 		margin: 52px 0 108px 0;
 		display: flex;

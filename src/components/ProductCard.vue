@@ -45,6 +45,8 @@
 
 	@import '../assets/styles/utils/vars';
 
+	// CARD STYLES
+
 	.card {
 		border-radius: 6px;
 		border: 2px solid $color-grey-light;
