@@ -91,7 +91,7 @@ export const products = [
 		'Image URL': 'https://scoop.co.za/download/marketing/images/AF-11G35.jpg'
 	},
 	{
-		'SKU': 'AF-11G35',
+		'SKU': 'AF-5XHD',
 		'Description': 'Ubiquiti AirFiber5X HD PtP Radio Gigabit WiFi | AF-5XHD',
 		'Type': 'Спутниковая тарелка',
 		'CPT': '64',
