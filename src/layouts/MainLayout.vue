@@ -3,7 +3,7 @@
 	<div class='main-layout'>
 		<main-header/>
 		<main class="main-layout__main">
-			<router-view/>
+			<router-view :key='this.$route.path'/>
 		</main>
 		<main-footer/>
 	</div>
