@@ -60,21 +60,29 @@
 
 	export default {
 		name: 'ProductPage',
-		components: {ProductCard},
+		components: {
+			ProductCard
+		},
 		data:() => {
 			return {
-				product: [],
+				product: {},
 				related: []
 			}
 		},
 		created() {
-			this.product = router.app.$route.params.result;
-
-			products.forEach(el => {
-				if (el['Type'] === this.product['Type']) {
-					this.related.push(el);
-				}
- 			});
+			const SKU = router.app.$route.params.SKU;
+			this.setProducts(SKU);
+		},
+		beforeRouteUpdate (to, from, next) {
+			const SKU = to.params.SKU;
+			this.setProducts(SKU);
+			next(true);
+		},
+		methods: {
+			setProducts(SKU) {
+				this.product = products.find(product => product.SKU === SKU.toUpperCase());
+				this.related = products.filter(product => product.Type === this.product.Type);
+			}
 		}
 	}
 

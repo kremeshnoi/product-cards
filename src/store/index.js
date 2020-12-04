@@ -40,13 +40,13 @@ export default new Vuex.Store({
 		},
 		computeRoute(ctx, result) {
 			try {
-				const title = result['SKU']
+				const SKU = result['SKU']
 					.split('/')
 					.splice(-1, 1)[0]
 					.toLowerCase()
 					.split('_')
 					.join('-');
-				router.push({ name: 'Product', params: { title, result } });
+				router.push({ name: 'Product', params: { SKU } });
 			} catch (error) {
 				throw new Error(error);
 			}

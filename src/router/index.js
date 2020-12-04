@@ -39,7 +39,7 @@ const routes = [
 		}
 	},
 	{
-		path: '/product/:title',
+		path: '/product/:SKU',
 		name: 'Product',
 		meta: {
 			layout: 'MainLayout'
