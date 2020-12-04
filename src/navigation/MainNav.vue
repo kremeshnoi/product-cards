@@ -1,11 +1,11 @@
 <template>
 
 	<nav class='navigation'>
-		<button
+		<div
 			v-if='getUserInfo.length === 0'
-			class='navigation__button'>
+			class='navigation__title'>
 			Войти в аккаунт
-		</button>
+		</div>
 
 		<div
 			v-if='getUserInfo === true'
@@ -64,6 +64,7 @@
 
 		&__title {
 			color: $color-white;
+			font-size: 14px;
 		}
 
 		&__button {
@@ -74,6 +75,7 @@
 			border: none;
 			outline: none;
 			cursor: pointer;
+			font-size: 14px;
 		}
 	}
 
