@@ -5,10 +5,10 @@
 			Наша продукция
 		</h1>
 		<div class='products__container'>
-			<product-card class='products__card'
-				v-for='(productsData, productsIndex) in products'
-				:key='productsIndex'
-				:productsPropData='productsData'/>
+			<product-card v-for='(productsData, productsIndex) in products'
+							  :key='productsIndex'
+							  :productsPropData='productsData'
+							  class='products__card'/>
 		</div>
 	</section>
 
@@ -16,52 +16,52 @@
 
 <script>
 
-	// IMPORTS
+// IMPORTS
 
-	import { products } from '@/utils/products';
-	import ProductCard from '@/components/ProductCard';
+import {products} from '@/utils/products';
+import ProductCard from '@/components/ProductCard';
 
-	// COMPONENT OPTIONS
+// COMPONENT OPTIONS
 
-	export default {
-		name: 'Products',
-		components: {
-			ProductCard
-		},
-		data:() => {
-			return {
-				products: products
-			}
+export default {
+	name: 'Products',
+	components: {
+		ProductCard
+	},
+	data: () => {
+		return {
+			products: products
 		}
 	}
+}
 
 </script>
 
 <style lang='scss' scoped>
 
-	// IMPORTS
+// IMPORTS
 
-	@import '../assets/styles/utils/vars';
+@import '../assets/styles/utils/vars';
 
-	// PRODUCTS STYLES
+// PRODUCTS STYLES
 
-	.products {
-		margin: 52px 0 108px 0;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
+.products {
+	margin: 52px 0 108px 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 
-		&__container {
-			display: grid;
-			grid-gap: 10px;
-			grid-template-columns: repeat(3, minmax(auto, 360px));
-		}
-
-		&__title {
-			font-size: 40px;
-			font-weight: 400;
-			color: $color-turquoise;
-		}
+	&__container {
+		display: grid;
+		grid-gap: 10px;
+		grid-template-columns: repeat(3, minmax(auto, 360px));
 	}
+
+	&__title {
+		font-size: 40px;
+		font-weight: 400;
+		color: $color-turquoise;
+	}
+}
 
 </style>

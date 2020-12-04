@@ -1,12 +1,11 @@
 <template>
 
 	<div class='card'
-	     @click='computeRoute(productsPropData)'>
+		  @click='computeRoute(productsPropData)'>
 		<div class='card__container'>
-			<img class='card__image'
-				alt='product'
-				:src='productsPropData["Image URL"]'>
-
+			<img :src='productsPropData["Image URL"]'
+				  alt='product'
+				  class='card__image'>
 			<div class='card__type'>
 				{{ productsPropData['Type'] }}
 			</div>
@@ -41,9 +40,9 @@
 
 <style lang='scss' scoped>
 
-	// IMPORTS
+// IMPORTS
 
-	@import '../assets/styles/utils/vars';
+@import '../assets/styles/utils/vars';
 
 	// CARD STYLES
 
@@ -52,9 +51,10 @@
 		border: 2px solid $color-grey-light;
 		padding: 20px;
 		cursor: pointer;
+
 		&:hover {
 			transition: 0.4s ease-in-out;
-			box-shadow: 1px 2px 15px -1px rgba(0,0,0,0.4);
+			box-shadow: 1px 2px 15px -1px rgba(0, 0, 0, 0.4);
 		}
 
 		&__container {

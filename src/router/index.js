@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import Home from '../views/Home.vue';
-import store, { isUser } from '../store';
+import store, {isUser} from '../store';
 
 Vue.use(VueRouter);
 
@@ -15,7 +15,7 @@ const routes = [
 		component: () => import('../views/Home.vue'),
 		beforeEnter: (to, from, next) => {
 			const currentUser = isUser();
-			if(!currentUser) {
+			if (!currentUser) {
 				next('/login');
 			}
 
@@ -31,7 +31,7 @@ const routes = [
 		component: () => import('../views/auth/Login.vue'),
 		beforeEnter: (to, from, next) => {
 			const currentUser = isUser();
-			if(currentUser) {
+			if (currentUser) {
 				next('/');
 			}
 
@@ -47,7 +47,7 @@ const routes = [
 		component: () => import('../views/ProductPage.vue'),
 		beforeEnter: (to, from, next) => {
 			const currentUser = isUser();
-			if(!currentUser) {
+			if (!currentUser) {
 				next('/login');
 			}
 

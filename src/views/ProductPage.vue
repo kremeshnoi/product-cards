@@ -7,9 +7,9 @@
 		<div class='product-page__container'>
 
 			<div class='product-page__image-container'>
-				<img class='product-page__image'
-				     :src='product["Image URL"]'
-				     :alt='product["SKU"]' >
+				<img :alt='product["SKU"]'
+					  :src='product["Image URL"]'
+					  class='product-page__image'>
 			</div>
 
 			<div class='product-page__info'>
@@ -37,9 +37,9 @@
 			</h2>
 			<div class='related__container'>
 				<product-card
-					class='related__card'
 					v-for='(productData, productIndex) in related.slice(0, 3)'
-					:productsPropData='productData'/>
+					:productsPropData='productData'
+					class='related__card'/>
 			</div>
 		</div>
 
@@ -51,7 +51,7 @@
 
 	// IMPORTS
 
-	import { products } from '@/utils/products';
+	import {products} from '@/utils/products';
 
 	// COMPONENT OPTIONS
 
@@ -63,7 +63,7 @@
 		components: {
 			ProductCard
 		},
-		data:() => {
+		data: () => {
 			return {
 				product: {},
 				related: []
@@ -73,7 +73,7 @@
 			const SKU = router.app.$route.params.SKU;
 			this.setProducts(SKU);
 		},
-		beforeRouteUpdate (to, from, next) {
+		beforeRouteUpdate(to, from, next) {
 			const SKU = to.params.SKU;
 			this.setProducts(SKU);
 			next(true);

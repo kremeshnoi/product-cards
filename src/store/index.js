@@ -46,7 +46,7 @@ export default new Vuex.Store({
 					.toLowerCase()
 					.split('_')
 					.join('-');
-				router.push({ name: 'Product', params: { SKU } });
+				router.push({name: 'Product', params: {SKU}});
 			} catch (error) {
 				throw new Error(error);
 			}

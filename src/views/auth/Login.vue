@@ -3,28 +3,28 @@
 	<div class='login'>
 		<div class='login__container'>
 			<form class='login__form'
-			      @submit.prevent='submitHandler'>
+					@submit.prevent='submitHandler'>
 
 				<label class='login__label'
-				       for='username'><b>Логин</b></label>
-				<input class='login__input'
-				       name='username'
-				       type='email'
-				       placeholder='Введите Email'
-				       v-model='email'
-				       required>
+						 for='username'><b>Логин</b></label>
+				<input v-model='email'
+						 class='login__input'
+						 name='username'
+						 placeholder='Введите Email'
+						 required
+						 type='email'>
 
 				<label class='login__label'
-				       for='password'><b>Пароль</b></label>
-				<input class='login__input'
-				       name='password'
-				       type='password'
-				       v-model='password'
-				       placeholder='Введите пароль'
-				       required>
+						 for='password'><b>Пароль</b></label>
+				<input v-model='password'
+						 class='login__input'
+						 name='password'
+						 placeholder='Введите пароль'
+						 required
+						 type='password'>
 
 				<button class='login__button'
-				        type='submit'>Войти
+						  type='submit'>Войти
 				</button>
 			</form>
 		</div>
@@ -36,8 +36,8 @@
 
 	// IMPORTS
 
-	import { users } from '@/utils/users';
-	import { mapActions } from 'vuex';
+	import {users} from '@/utils/users';
+	import {mapActions} from 'vuex';
 	import router from '@/router';
 
 	// COMPONENT OPTIONS
@@ -64,8 +64,7 @@
 
 					if (data[mid].email === email && data[mid].password === password) {
 						return data[mid].email;
-					}
-					else if (data[mid].name < email) start = mid + 1;
+					} else if (data[mid].name < email) start = mid + 1;
 					else end = mid - 1;
 				}
 				return console.log('Wrong data');

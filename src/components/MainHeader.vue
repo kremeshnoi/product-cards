@@ -3,7 +3,7 @@
 	<header class='header'>
 		<div class='header__container'>
 			<router-link class='header__logo'
-				to='/'>
+							 to='/'>
 				Логотип
 			</router-link>
 			<main-nav/>
@@ -58,7 +58,6 @@
 			font-size: 24px;
 			text-decoration: none;
 		}
-
 	}
 
 </style>

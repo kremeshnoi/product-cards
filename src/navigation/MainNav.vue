@@ -15,8 +15,8 @@
 
 		<button
 			v-if='getUserInfo === true'
-			@click='logout()'
-			class='navigation__button'>
+			class='navigation__button'
+			@click='logout()'>
 			Выйти из системы
 		</button>
 	</nav>
@@ -27,7 +27,7 @@
 
 	// IMPORTS
 
-	import { mapMutations, mapGetters } from 'vuex'
+	import {mapMutations, mapGetters} from 'vuex'
 	import router from '@/router';
 
 	// COMPONENT OPTIONS
