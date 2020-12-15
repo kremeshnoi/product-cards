@@ -45,8 +45,8 @@
 	export default {
 		name: 'Login',
 		data: () => ({
-			email: '',
-			password: ''
+			email: 'kristymorin@omatom.com',
+			password: 'kristymorin123'
 		}),
 		methods: {
 			...mapActions(['addUserStatus']),
