@@ -1,7 +1,9 @@
 # Product Cards
+
 An example of the implementation of product cards
 
-![product cards](https://i.imgur.com/Nl2IUsv.png)
+###
+<img align="center" src="https://i.imgur.com/Nl2IUsv.png" width="800px"> 
 
 ## Requirements
 * Node.js https://nodejs.org/en/download
