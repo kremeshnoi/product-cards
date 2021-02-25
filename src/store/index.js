@@ -1,24 +1,24 @@
-import Vue from 'vue';
-import Vuex from 'vuex';
-import router from '../router';
+import Vue from "vue"
+import Vuex from "vuex"
+import router from "../router"
 
-Vue.use(Vuex);
+Vue.use(Vuex)
 
 const authUser = function () {
-	return localStorage.getItem('user') ? JSON.parse(localStorage.getItem('user')) : [];
-};
+	return localStorage.getItem("user") ? JSON.parse(localStorage.getItem("user")) : []
+}
 
 export const isUser = function () {
-	return !!localStorage.getItem('user');
-};
+	return !!localStorage.getItem("user")
+}
 
 const saveUser = function (user) {
-	localStorage.setItem('user', JSON.stringify(user));
-};
+	localStorage.setItem("user", JSON.stringify(user))
+}
 
 const clearUser = function () {
-	localStorage.setItem('user', []);
-};
+	localStorage.setItem("user", [])
+}
 
 export default new Vuex.Store({
 	state: {
@@ -26,29 +26,29 @@ export default new Vuex.Store({
 	},
 	mutations: {
 		SET_USER_INFO(state, userInfo) {
-			state.userInfo = userInfo;
-			saveUser(userInfo);
+			state.userInfo = userInfo
+			saveUser(userInfo)
 		},
 		CLEAR_USER_INFO(state) {
-			state.userInfo = [];
-			clearUser();
+			state.userInfo = []
+			clearUser()
 		}
 	},
 	actions: {
 		addUserStatus(ctx, data) {
-			ctx.commit('SET_USER_INFO', data);
+			ctx.commit("SET_USER_INFO", data)
 		},
 		computeRoute(ctx, result) {
 			try {
-				const SKU = result['SKU']
-					.split('/')
+				const SKU = result["SKU"]
+					.split("/")
 					.splice(-1, 1)[0]
 					.toLowerCase()
-					.split('_')
-					.join('-');
-				router.push({name: 'Product', params: {SKU}});
+					.split("_")
+					.join("-")
+				router.push({name: "Product", params: {SKU}})
 			} catch (error) {
-				throw new Error(error);
+				throw error.message
 			}
 		}
 	},

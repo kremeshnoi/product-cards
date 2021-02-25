@@ -1,68 +1,28 @@
-import Vue from 'vue';
-import VueRouter from 'vue-router';
-import Home from '../views/Home.vue';
-import store, {isUser} from '../store';
+import Vue from "vue"
+import VueRouter from "vue-router"
 
-Vue.use(VueRouter);
+Vue.use(VueRouter)
 
 const routes = [
 	{
-		path: '/',
-		name: 'Home',
-		meta: {
-			layout: 'MainLayout'
-		},
-		component: () => import('../views/Home.vue'),
-		beforeEnter: (to, from, next) => {
-			const currentUser = isUser();
-			if (!currentUser) {
-				next('/login');
-			}
-
-			next();
-		}
+		path: "/",
+		name: "Home",
+		component: () => import("../views/Home.vue")
 	},
 	{
-		path: '/login',
-		name: 'Login',
-		meta: {
-			layout: 'MainLayout'
-		},
-		component: () => import('../views/auth/Login.vue'),
-		beforeEnter: (to, from, next) => {
-			const currentUser = isUser();
-			if (currentUser) {
-				next('/');
-			}
-
-			next();
-		}
-	},
-	{
-		path: '/product/:SKU',
-		name: 'Product',
-		meta: {
-			layout: 'MainLayout'
-		},
-		component: () => import('../views/ProductPage.vue'),
-		beforeEnter: (to, from, next) => {
-			const currentUser = isUser();
-			if (!currentUser) {
-				next('/login');
-			}
-
-			next();
-		}
+		path: "/product/:SKU",
+		name: "Product",
+		component: () => import("../views/ProductPage.vue")
 	}
-];
+]
 
 const router = new VueRouter({
-	mode: 'history',
+	mode: "history",
 	base: process.env.BASE_URL,
 	routes,
 	scrollBehavior (to, from, savedPosition) {
 		return { x: 0, y: 0 }
 	}
-});
+})
 
-export default router;
+export default router

@@ -6,14 +6,10 @@
 
 <script>
 
-	// IMPORTS
-
-	import Products from '@/components/Products';
-
-	// COMPONENT OPTIONS
+	import Products from "@/components/Products"
 
 	export default {
-		name: 'Home',
+		name: "Home",
 		components: {
 			Products
 		}

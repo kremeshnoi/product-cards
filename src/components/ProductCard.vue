@@ -1,95 +1,80 @@
 <template>
 
-	<div class='card'
-		  @click='computeRoute(productsPropData)'>
-		<div class='card__container'>
-			<img :src='productsPropData["Image URL"]'
-				  alt='product'
-				  class='card__image'>
-			<div class='card__type'>
-				{{ productsPropData['Type'] }}
-			</div>
-			<div class='card__sku'>
-				{{ productsPropData['SKU'] }}
-			</div>
-			<div class='card__price'>
-				{{ productsPropData['Retail Price'] }} грн
-			</div>
-		</div>
-	</div>
+  <div class="card" @click="computeRoute(productsPropData)">
+    <div class="card__container">
+      <img :src="productsPropData['Image URL']"
+          alt="product"
+          class="card__image">
+
+      <span class="card__type">
+        {{ productsPropData["Type"] }}
+      </span>
+
+      <span class="card__sku">
+        {{ productsPropData["SKU"] }}
+      </span>
+
+      <span class="card__price">
+        {{ productsPropData["Retail Price"] }} UAH
+      </span>
+    </div>
+  </div>
 
 </template>
 
 <script>
 
-	// IMPORTS
+  import { mapActions } from "vuex"
 
-	import { mapActions } from 'vuex';
-
-	// COMPONENT OPTIONS
-
-	export default {
-		name: 'ProductCard',
-		props: ['productsPropData'],
-		methods: {
-			...mapActions(['computeRoute'])
-		}
-	}
+  export default {
+    name: "ProductCard",
+    props: ["productsPropData"],
+    methods: {
+      ...mapActions(["computeRoute"])
+    }
+  }
 
 </script>
 
-<style lang='scss' scoped>
+<style lang="sass" scoped>
 
-	// IMPORTS
+  @import "../assets/styles/utils/vars"
+  @import "../assets/styles/utils/mixins"
 
-	@import '../assets/styles/utils/vars';
-	@import '../assets/styles/utils/mixins';
+  .card
+    padding: 20px
+    cursor: pointer
+    border-radius: 6px
+    border: 2px solid $color-grey-light
+    &:hover
+      transition: 0.4s ease-in-out
+      box-shadow: 1px 2px 15px -1px rgba(0, 0, 0, 0.4)
 
-	// CARD STYLES
+    &__container
+      display: flex
+      flex-direction: column
 
-	.card {
-		border-radius: 6px;
-		border: 2px solid $color-grey-light;
-		padding: 20px;
-		cursor: pointer;
+    &__image
+      width: 100%
+      max-width: 200px
+      align-self: center
 
-		&:hover {
-			transition: 0.4s ease-in-out;
-			box-shadow: 1px 2px 15px -1px rgba(0, 0, 0, 0.4);
-		}
+    &__type
+      margin: 20px 0 0 0
+      text-align: start
+      color: $color-grey-dark
 
-		&__container {
-			display: flex;
-			flex-direction: column;
-		}
+    &__sku
+      font-weight: 600
+      text-align: start
 
-		&__image {
-			width: 100%;
-			max-width: 200px;
-			align-self: center;
-		}
-
-		&__type {
-			margin: 4px 0;
-			color: $color-grey-dark;
-			text-align: start;
-		}
-
-		&__sku {
-			margin: 4px 0;
-			font-weight: 600;
-			text-align: start;
-		}
-
-		&__price {
-			font-weight: 600;
-			font-size: 20px;
-			color: $color-green;
-			text-align: end;
-			@include mq(tablet, max) {
-				text-align: start;
-			}
-		}
-	}
+    &__price
+      font-size: 20px
+      text-align: end
+      font-weight: 600
+      margin: 8px 0 0 0
+      color: $color-green
+      +mq(tablet, max)
+        text-align: start
 
 </style>
