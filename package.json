@@ -3,9 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
+    "start": "vue-cli-service serve",
     "build": "vue-cli-service build"
   },
+  "author": "kremeshnoi",
   "dependencies": {
     "core-js": "^3.6.5",
     "register-service-worker": "^1.7.1",
@@ -27,5 +28,10 @@
     "> 1%",
     "last 2 versions",
     "not dead"
-  ]
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kremeshnoi/product-cards.git"
+  },
+  "description": "An example of the implementation of product cards"
 }
