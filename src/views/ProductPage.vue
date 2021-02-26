@@ -4,7 +4,7 @@
 		<h1 class="product-page__title">
 			Product
 		</h1>
-		<router-link class="product-page__back" to="/">
+		<router-link class="product-page__home-link" to="/">
 			back to homepage
 		</router-link>
 		<div class="product-page__container">
@@ -102,22 +102,19 @@
 		max-width: 1200px
 		align-items: center
 		flex-direction: column
-		+mq(phone-wide, max)
-			margin: 24px 0 54px 0
 
 		&__title
 			font-size: 40px
 			font-weight: 400
-			margin: 40px 0 0 0
 			color: $color-grey-dark
 			text-transform: uppercase
 			+mq(phone-wide, max)
 				font-size: 32px
 
-		&__back
+		&__home-link
 			color: $color-grey-dark
 			text-decoration: none
-			margin: 30px 0 40px 0
+			margin: 0 0 50px 0
 
 		&__container
 			width: 100%
